@@ -1,0 +1,14 @@
+func(snode, tgval, list){
+//check visited for starting node
+    if(list.has(snode)) return;
+    list.add(snode)
+    snode.neighbor.forEach(nb => {
+        if(nb.val === targetVal) return nb
+        func(nb, tgval, list)
+    })
+
+    return null;
+}
+//add each starting node to visited for reference
+//check if node.val === targetVal
+//repeat the process for each neighbor
