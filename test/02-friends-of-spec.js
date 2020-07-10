@@ -80,7 +80,6 @@ describe('Calculating friends of', () => {
       list[target] = [target];
 
       const result = friendsOf(cloneList(list), target, names.length + 1);
-
       expect(result).to.eql([]);
     });
 
